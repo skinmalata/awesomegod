@@ -1,0 +1,8 @@
+{
+  "appId": "com.awesomegodministries.app",
+  "appName": "Awesome God Ministries",
+  "webDir": "app",
+  "android": {
+    "backgroundColor": "#12081f"
+  }
+}

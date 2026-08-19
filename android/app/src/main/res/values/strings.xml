@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Awesome God Ministries</string>
+    <string name="title_activity_main">Awesome God Ministries</string>
+    <string name="package_name">com.awesomegodministries.app</string>
+    <string name="custom_url_scheme">com.awesomegodministries.app</string>
+</resources>
