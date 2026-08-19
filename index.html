@@ -6,6 +6,12 @@
   <title>Awesome God Ministries | Port Harcourt</title>
   <meta name="description" content="Awesome God Ministries, led by Apostle Joseph Cookey — a miracle-working ministry in Port Harcourt, Nigeria. Winning souls, raising leaders through the Awesome God Prophetic School, and restoring hope to the hopeless.">
   <meta name="theme-color" content="#12081f">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Awesome God">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="app/icons/icon-192.png">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -356,6 +362,17 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").then(function (reg) {
+      console.log("Awesome God Ministries site registered. Scope:", reg.scope);
+    }).catch(function (err) {
+      console.warn("Service worker registration failed:", err);
+    });
+  });
+}
+</script>
 <script>
 (function () {
   "use strict";

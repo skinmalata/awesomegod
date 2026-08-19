@@ -4,7 +4,7 @@
    ========================================================================== */
 "use strict";
 
-var CACHE = "agm-app-v1";
+var CACHE = "agm-app-v2";
 var CORE = [
   "./",
   "index.html",
@@ -14,7 +14,8 @@ var CORE = [
   "icons/maskable-512.png",
   "js/bible-ot.js",
   "js/bible-nt.js",
-  "js/bible-nt2.js"
+  "js/bible-nt2.js",
+  "js/kjv.js"
 ];
 
 self.addEventListener("install", function (event) {
