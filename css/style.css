@@ -221,11 +221,11 @@ h4 { font-size: 1.15rem; }
 .brand { display: flex; align-items: center; gap: 0.7rem; color: #fff; }
 .brand:hover { color: var(--clr-gold-400); }
 
-.brand__mark {
-  width: 42px;
-  height: 42px;
+.brand__logo {
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
-  color: var(--clr-gold-400);
+  object-fit: contain;
 }
 
 .brand__name {
@@ -941,6 +941,11 @@ h4 { font-size: 1.15rem; }
 [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1025px) {
+  .hero__cutout { width: 160%; }
 }
 
 /* ---------- Responsive ---------- */
