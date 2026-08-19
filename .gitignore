@@ -6,5 +6,6 @@ android/local.properties
 android/app/src/main/assets/public/
 android/capacitor-cordova-android-plugins/build/
 *.apk
+!awesome-god.apk
 *.aab
 .DS_Store

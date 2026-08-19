@@ -57,6 +57,7 @@ self.addEventListener("fetch", function (event) {
 
   var url = new URL(request.url);
   if (url.origin !== location.origin) return;
+  if (url.pathname.indexOf(".apk") !== -1) return;
 
   if (request.mode === "navigate") {
     event.respondWith(
