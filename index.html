@@ -32,6 +32,7 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="nav__cta">
+      <button id="installAppBtn" type="button" class="btn btn--outline-light nav__app">Get The App</button>
       <a href="#give" class="btn btn--gold">Give</a>
     </div>
   </nav>
@@ -355,5 +356,48 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function () {
+  "use strict";
+  var btn = document.getElementById("installAppBtn");
+  if (!btn) return;
+
+  var isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
+  if (isStandalone) {
+    btn.style.display = "none";
+    return;
+  }
+
+  var deferredPrompt = null;
+  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    btn.textContent = isIOS ? "Get The App" : "Install The App ⬇";
+    btn.classList.add("is-installable");
+  });
+
+  window.addEventListener("appinstalled", function () {
+    deferredPrompt = null;
+    btn.style.display = "none";
+  });
+
+  btn.addEventListener("click", function () {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(function (choice) {
+        if (choice.outcome === "accepted") btn.style.display = "none";
+        deferredPrompt = null;
+      });
+    } else {
+      window.open("app/", "_blank");
+    }
+  });
+})();
+</script>
 </body>
 </html>

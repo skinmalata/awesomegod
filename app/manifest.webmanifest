@@ -1,0 +1,46 @@
+{
+  "name": "Awesome God Ministries",
+  "short_name": "Awesome God",
+  "description": "A Word-and-Power ministry in Port Harcourt — watch live, read the Bible, give, pray, and stay connected with Awesome God Ministries.",
+  "id": "agm-app",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#12081f",
+  "theme_color": "#12081f",
+  "lang": "en",
+  "categories": ["lifestyle", "education"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Read the Bible",
+      "short_name": "Bible",
+      "url": "./index.html?tab=bible"
+    },
+    {
+      "name": "Give",
+      "short_name": "Give",
+      "url": "./index.html?tab=give"
+    }
+  ]
+}
